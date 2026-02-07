@@ -1,0 +1,34 @@
+/**
+ * Splash Page Styles
+ *
+ * @package Blueprint_Child
+ */
+
+.splash-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.splash-content {
+    max-width: 800px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.splash-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .splash-content {
+        padding: 1.5rem;
+    }
+
+    .splash-content h1 {
+        font-size: 2rem;
+    }
+}

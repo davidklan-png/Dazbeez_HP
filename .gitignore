@@ -1,0 +1,63 @@
+# Dazbeez_HP - WordPress Child Theme Repository
+# This repository tracks ONLY the blueprint-child child theme
+# All other WordPress files are excluded
+
+# WordPress core (excluded - managed on server)
+/wp-admin/
+/wp-includes/
+/*.php
+!wp-content/
+
+# WordPress content (excluded except our child theme)
+/wp-content/languages/
+/wp-content/plugins/
+/wp-content/upgrade/
+/wp-content/uploads/
+/wp-content/themes/*/
+!/wp-content/themes/blueprint-child/
+
+# Parent themes (excluded)
+/wp-content/themes/twenty*/
+/wp-content/themes/blueprint/
+
+# WordPress config (excluded - managed on server)
+/wp-config.php
+/.htaccess
+/robots.txt
+/sitemap.xml
+
+# Common development artifacts
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+*~
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node.js / build tools (forbidden per CONTRIBUTING.md)
+node_modules/
+package-lock.json
+package.json
+webpack.config.js
+vite.config.js
+*.map
+
+# Any other generated files
+*.cache/
+
+# Secrets and credentials
+.secrets
+*.pem
+*.key
+id_rsa*
+*.Zone.Identifier
