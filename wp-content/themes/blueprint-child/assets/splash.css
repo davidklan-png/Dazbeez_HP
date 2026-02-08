@@ -1,34 +1,361 @@
 /**
  * Splash Page Styles
  *
+ * Styles for the Dazbeez splash landing page
+ * Works with TranslatePress for bilingual content
+ *
  * @package Blueprint_Child
  */
 
+/* ===================================
+   Container & Layout
+   =================================== */
+
 .splash-page {
-    min-height: 100vh;
+    width: 100%;
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+.splash-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ===================================
+   Hero Section
+   =================================== */
+
+.splash-page .wp-block-cover,
+.splash-page .hero-section {
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.splash-content {
-    max-width: 800px;
-    padding: 2rem;
     text-align: center;
+    padding: 4rem 0;
 }
 
-.splash-content h1 {
+.splash-page .wp-block-cover h1,
+.splash-page .hero-section h1 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    letter-spacing: -0.02em;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-    .splash-content {
+.splash-page .wp-block-cover p,
+.splash-page .hero-section p {
+    font-size: 1.125rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+/* ===================================
+   Services Section
+   =================================== */
+
+.splash-services {
+    padding: 4rem 0;
+}
+
+.splash-services-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.splash-services-section h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    color: #1a1a1a;
+}
+
+.splash-services-section p {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.splash-services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.splash-service-card {
+    background: #f8f8f8;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: left;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.splash-service-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.splash-service-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.splash-service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+    color: #1a1a1a;
+}
+
+.splash-service-card p {
+    font-size: 0.9375rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ===================================
+   Products Section
+   =================================== */
+
+.splash-products {
+    padding: 4rem 0;
+    background: #fafafa;
+}
+
+.splash-products-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.splash-products-section h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    color: #1a1a1a;
+}
+
+.splash-products-section p {
+    font-size: 1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.splash-products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.splash-product-card {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.splash-product-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.splash-product-image {
+    width: 100%;
+    height: 200px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.875rem;
+}
+
+.splash-product-content {
+    padding: 1.5rem;
+}
+
+.splash-product-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    color: #1a1a1a;
+}
+
+.splash-product-card p {
+    font-size: 0.9375rem;
+    color: #666;
+    margin: 0 0 1rem;
+    line-height: 1.6;
+}
+
+.splash-product-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.splash-product-cta {
+    display: inline-block;
+    padding: 0.625rem 1.25rem;
+    background: #1a1a1a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.splash-product-cta:hover {
+    background: #333;
+}
+
+/* ===================================
+   CTA Section
+   =================================== */
+
+.splash-cta-section {
+    padding: 5rem 0;
+    text-align: center;
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.splash-cta-section h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    color: #fff;
+}
+
+.splash-cta-section p {
+    font-size: 1rem;
+    color: #999;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+.splash-cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #fff;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.splash-cta-button:hover {
+    background: #f0f0f0;
+}
+
+/* ===================================
+   Language Switcher (TranslatePress)
+   =================================== */
+
+/* Fix for TranslatePress language switcher positioning */
+.splash-page .trp-language-switcher {
+    position: fixed !important;
+    top: 1rem !important;
+    right: 1rem !important;
+    z-index: 1000 !important;
+    background: #fff !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 2rem !important;
+    padding: 0.25rem 0.5rem !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.splash-page .trp-language-switcher a {
+    padding: 0.375rem 0.75rem !important;
+    font-size: 0.875rem !important;
+    color: #666 !important;
+    text-decoration: none !important;
+    border-radius: 1.5rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.splash-page .trp-language-switcher a:hover,
+.splash-page .trp-language-switcher a.trp-active-language {
+    background: #1a1a1a !important;
+    color: #fff !important;
+}
+
+/* ===================================
+   Responsive Breakpoints
+   =================================== */
+
+@media (min-width: 640px) {
+    .splash-services-grid,
+    .splash-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .splash-page .wp-block-cover h1,
+    .splash-page .hero-section h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .splash-services-grid,
+    .splash-products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===================================
+   Mobile Responsive
+   =================================== */
+
+@media (max-width: 420px) {
+    .splash-page .wp-block-cover h1,
+    .splash-page .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .splash-services-section h2,
+    .splash-products-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .splash-service-card,
+    .splash-product-card {
         padding: 1.5rem;
     }
 
-    .splash-content h1 {
-        font-size: 2rem;
+    .splash-cta-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+}
+
+/* ===================================
+   Progressive Enhancement
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .splash-service-card:hover,
+    .splash-product-card:hover,
+    .splash-product-cta:hover,
+    .splash-cta-button:hover {
+        transform: none;
+        transition: none;
     }
 }
