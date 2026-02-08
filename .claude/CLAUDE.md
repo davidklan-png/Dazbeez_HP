@@ -347,7 +347,24 @@ A change is done only if:
 2. **Propose a short plan** (numbered steps, test checklist, rollback)
 3. **Make minimal diffs** (prefer edits over rewrites)
 4. **Summarize changed files** and what will be published to `public_html/wp-content/themes/blueprint-child/`
-5. **Provide a staged test checklist** (local → staging validation → rollback)
+5. **Provide a staged test checklist** (local → production validation → rollback)
+
+### Available Skills & Prompts
+
+For consistent, safe operations, reference these skills and prompts:
+
+| Resource | Location | Purpose |
+|----------|----------|---------|
+| Deploy Guardrails | [`.claude/skills/wp-git-deploy-guardrails.md`](.claude/skills/wp-git-deploy-guardrails.md) | Core rules for Git deployment |
+| Deploy-Safe Change Prompt | [`.prompts/wp-deploy-safe-change.prompt.md`](.prompts/wp-deploy-safe-change.prompt.md) | Template for making changes |
+| Deploy Hook Audit | [`.prompts/wp-deploy-hook-audit.prompt.md`](.prompts/wp-deploy-hook-audit.prompt.md) | Troubleshoot deployment issues |
+| Deploy Checklist | [`docs/deploy-checklist.md`](docs/deploy-checklist.md) | Pre/post-deploy verification |
+
+**To use these resources:**
+- Reference the guardrails when planning any change
+- Use the deploy-safe prompt template for structured requests
+- Run the hook audit if deployment doesn't work as expected
+- Follow the checklist for every production deploy
 
 ---
 
